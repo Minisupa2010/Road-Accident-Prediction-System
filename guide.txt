@@ -1,0 +1,52 @@
+ROAD ACCIDENT PREDICTION SYSTEM - USER GUIDE
+
+INTRODUCTION
+This system predicts and analyzes road accident risks using historical accident data, weather, and road conditions. It identifies dangerous intersections and supports proactive safety planning.
+
+FEATURES
+- Accident hotspot heatmap (interactive)
+- Prediction panel (probability & accident count)
+- Risk scoring with empirical Bayes smoothing
+- Ranked intersection list
+- PDF report generation
+- Google Maps integration
+- Containerized deployment with Docker
+
+INSTALLATION
+1. Clone or extract the project folder.
+2. Copy `.env.example` to `.env` and set API keys.
+3. Create a virtual environment:
+   python -m venv venv
+   source venv/bin/activate
+4. Install dependencies:
+   pip install -r requirements.txt
+
+DATA
+Download the demo dataset:
+   python download_data.py --out data/accidents.csv
+
+MODEL TRAINING
+Train the models:
+   python train_model.py --data data/accidents.csv --out models
+
+RUNNING THE APP
+Start the Streamlit dashboard:
+   python -m streamlit run app.py
+Open http://localhost:8501 in your browser.
+
+DOCKER DEPLOYMENT
+Build and run the container:
+   docker build -t road-accident-system .
+   docker run -p 8501:8501 --env-file .env road-accident-system
+
+Or with docker-compose:
+   docker-compose up
+
+REPORTS
+Generate PDF report:
+   python make_report.py
+
+NEXT STEPS
+- Add traffic volume data for better exposure adjustment.
+- Improve models with spatio-temporal methods.
+- Extend PDF reports with charts and maps.
