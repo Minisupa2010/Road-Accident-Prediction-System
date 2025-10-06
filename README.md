@@ -20,15 +20,3 @@ A production-ready, self-hosted system for analyzing and predicting road acciden
 - **Safe defaults** and error-handling for production stability
 
 ---
-
-## Quickstart (local machine)
-
-**Prereqs**
-- Python 3.9+  
-- Git (optional)  
-- Docker (optional, for Redis via Docker)  
-
-1. **Unzip the project**
-   ```bash
-   unzip road_accident_prediction_system_robust.zip -d road_accident_robust
-   cd road_accident_robust
