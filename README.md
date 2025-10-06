@@ -1,4 +1,4 @@
-# Road Accident Prediction System — Robust Final
+# Road Accident Prediction System ( streamlit based )
 
 A production-ready, self-hosted system for analyzing and predicting road accidents using historical incident data, weather enrichment, and machine-learning models. This package includes a Streamlit UI, background worker (Celery), weather enrichment with caching (Open-Meteo), OSGB → WGS84 coordinate conversion for UK STATS19 datasets, SHAP explanations, and Docker Compose for local orchestration.
 
